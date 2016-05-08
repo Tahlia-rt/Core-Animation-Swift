@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         
-        let vc = ProgressViewConroller()
+        let vc = LED_ClockViewController()
         window?.rootViewController = vc
         
         window?.makeKeyAndVisible()

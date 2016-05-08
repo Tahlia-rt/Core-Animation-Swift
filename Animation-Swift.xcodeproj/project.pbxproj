@@ -28,6 +28,7 @@
 		148B9D261CDF24DD006D3DDF /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D111CDF24DD006D3DDF /* UIView+WebCacheOperation.m */; };
 		148B9D271CDF24DD006D3DDF /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D131CDF24DD006D3DDF /* SDWebImageCompat.m */; };
 		148B9D281CDF24DD006D3DDF /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D141CDF24DD006D3DDF /* NSData+ImageContentType.m */; };
+		14E9F3BE1CDF3A0C002A278E /* LED-ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */; };
 		14FF69681CDE1547006890EC /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF69671CDE1547006890EC /* Shadow.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		148B9D191CDF24DD006D3DDF /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
 		148B9D1A1CDF24DD006D3DDF /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		148B9D2A1CDF2511006D3DDF /* ImageLoaderIndicator-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageLoaderIndicator-Bridging-Header.h"; path = "Animation-Swift/ImageLoaderIndicator-Bridging-Header.h"; sourceTree = "<group>"; };
+		14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LED-ClockViewController.swift"; sourceTree = "<group>"; };
 		14FF69671CDE1547006890EC /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				140C252A1CDCE0F3008047E9 /* AppDelegate.swift */,
 				148B9CFA1CDF249C006D3DDF /* ProgressViewConroller.swift */,
 				140C252C1CDCE0F3008047E9 /* Base.swift */,
+				14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */,
 				14FF69671CDE1547006890EC /* Shadow.swift */,
 				140C25311CDCE0F4008047E9 /* Assets.xcassets */,
 				140C25331CDCE0F4008047E9 /* LaunchScreen.storyboard */,
@@ -245,6 +248,7 @@
 				148B9D1D1CDF24DD006D3DDF /* SDWebImageManager.m in Sources */,
 				148B9D281CDF24DD006D3DDF /* NSData+ImageContentType.m in Sources */,
 				148B9D271CDF24DD006D3DDF /* SDWebImageCompat.m in Sources */,
+				14E9F3BE1CDF3A0C002A278E /* LED-ClockViewController.swift in Sources */,
 				148B9CF91CDF0CB6006D3DDF /* CircularLoaderView.swift in Sources */,
 				140C252D1CDCE0F3008047E9 /* Base.swift in Sources */,
 				140C252B1CDCE0F3008047E9 /* AppDelegate.swift in Sources */,
