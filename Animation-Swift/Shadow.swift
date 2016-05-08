@@ -9,18 +9,20 @@
 import UIKit
 
 class Chapter4: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.backgroundColor = UIColor.grayColor()
+        
         let bluelayer = CALayer()
         bluelayer.frame = CGRectMake(0, 0, 100.0, 100.0)
         bluelayer.backgroundColor = UIColor.blueColor().CGColor
         bluelayer.position = self.view.center
         //阴影
         bluelayer.shadowOpacity = 1.0
-//        bluelayer.shadowRadius = 10.0
-//        bluelayer.shadowOffset = CGSizeMake(0, 10.0)
+        //        bluelayer.shadowRadius = 10.0
+        //        bluelayer.shadowOffset = CGSizeMake(0, 10.0)
         view.layer.addSublayer(bluelayer)
         
         // Do any additional setup after loading the view.
@@ -43,22 +45,7 @@ class Chapter4: UIViewController {
         maskLayer.strokeColor = UIColor.yellowColor().CGColor
         maskLayer.path = UIBezierPath(ovalInRect: CGRectMake(0, 0, 50.0, 50.0)).CGPath
         redLayer.mask = maskLayer
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
