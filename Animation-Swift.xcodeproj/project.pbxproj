@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1407164A1CE02A20006179B7 /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140716481CE02A20006179B7 /* TransformViewController.swift */; };
 		1407164B1CE02A20006179B7 /* TransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140716491CE02A20006179B7 /* TransformViewController.xib */; };
+		1407164D1CE05C16006179B7 /* CubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407164C1CE05C16006179B7 /* CubeViewController.swift */; };
 		140C252B1CDCE0F3008047E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C252A1CDCE0F3008047E9 /* AppDelegate.swift */; };
 		140C252D1CDCE0F3008047E9 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C252C1CDCE0F3008047E9 /* Base.swift */; };
 		140C25321CDCE0F4008047E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140C25311CDCE0F4008047E9 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		148B9D261CDF24DD006D3DDF /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D111CDF24DD006D3DDF /* UIView+WebCacheOperation.m */; };
 		148B9D271CDF24DD006D3DDF /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D131CDF24DD006D3DDF /* SDWebImageCompat.m */; };
 		148B9D281CDF24DD006D3DDF /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D141CDF24DD006D3DDF /* NSData+ImageContentType.m */; };
+		14B45BE91CE1F9ED00A28189 /* UIColor+Expanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B45BE81CE1F9ED00A28189 /* UIColor+Expanded.swift */; };
 		14E9F3BE1CDF3A0C002A278E /* LED-ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */; };
 		14FF69681CDE1547006890EC /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF69671CDE1547006890EC /* Shadow.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,7 @@
 /* Begin PBXFileReference section */
 		140716481CE02A20006179B7 /* TransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
 		140716491CE02A20006179B7 /* TransformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransformViewController.xib; sourceTree = "<group>"; };
+		1407164C1CE05C16006179B7 /* CubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeViewController.swift; sourceTree = "<group>"; };
 		140C25271CDCE0F3008047E9 /* Animation-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animation-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		140C252A1CDCE0F3008047E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		140C252C1CDCE0F3008047E9 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		148B9D191CDF24DD006D3DDF /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
 		148B9D1A1CDF24DD006D3DDF /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		148B9D2A1CDF2511006D3DDF /* ImageLoaderIndicator-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageLoaderIndicator-Bridging-Header.h"; path = "Animation-Swift/ImageLoaderIndicator-Bridging-Header.h"; sourceTree = "<group>"; };
+		14B45BE81CE1F9ED00A28189 /* UIColor+Expanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Expanded.swift"; path = "CircularLoaderView/UIColor+Expanded.swift"; sourceTree = "<group>"; };
 		14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LED-ClockViewController.swift"; sourceTree = "<group>"; };
 		14FF69671CDE1547006890EC /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +117,7 @@
 			children = (
 				148B9CFC1CDF24C2006D3DDF /* SDWebImage */,
 				148B9CF61CDF0C8B006D3DDF /* CircularLoaderView */,
-				140C253C1CDCE41A008047E9 /* UIView+Frame.swift */,
+				14B45BEA1CE1F9F800A28189 /* Extension */,
 				140C252A1CDCE0F3008047E9 /* AppDelegate.swift */,
 				148B9CFA1CDF249C006D3DDF /* ProgressViewConroller.swift */,
 				140C252C1CDCE0F3008047E9 /* Base.swift */,
@@ -124,6 +128,7 @@
 				140C25361CDCE0F4008047E9 /* Info.plist */,
 				140716481CE02A20006179B7 /* TransformViewController.swift */,
 				140716491CE02A20006179B7 /* TransformViewController.xib */,
+				1407164C1CE05C16006179B7 /* CubeViewController.swift */,
 			);
 			path = "Animation-Swift";
 			sourceTree = "<group>";
@@ -170,6 +175,15 @@
 				148B9D1A1CDF24DD006D3DDF /* UIImage+MultiFormat.h */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		14B45BEA1CE1F9F800A28189 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14B45BE81CE1F9ED00A28189 /* UIColor+Expanded.swift */,
+				140C253C1CDCE41A008047E9 /* UIView+Frame.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +259,7 @@
 			files = (
 				148B9D241CDF24DD006D3DDF /* UIImage+MultiFormat.m in Sources */,
 				148B9CFB1CDF249C006D3DDF /* ProgressViewConroller.swift in Sources */,
+				1407164D1CE05C16006179B7 /* CubeViewController.swift in Sources */,
 				14FF69681CDE1547006890EC /* Shadow.swift in Sources */,
 				1407164A1CE02A20006179B7 /* TransformViewController.swift in Sources */,
 				148B9D201CDF24DD006D3DDF /* UIImageView+WebCache.m in Sources */,
@@ -252,6 +267,7 @@
 				148B9D211CDF24DD006D3DDF /* SDWebImagePrefetcher.m in Sources */,
 				148B9D1C1CDF24DD006D3DDF /* SDWebImageDownloaderOperation.m in Sources */,
 				148B9D251CDF24DD006D3DDF /* SDWebImageDecoder.m in Sources */,
+				14B45BE91CE1F9ED00A28189 /* UIColor+Expanded.swift in Sources */,
 				148B9D1F1CDF24DD006D3DDF /* SDWebImageDownloader.m in Sources */,
 				148B9D1D1CDF24DD006D3DDF /* SDWebImageManager.m in Sources */,
 				148B9D281CDF24DD006D3DDF /* NSData+ImageContentType.m in Sources */,

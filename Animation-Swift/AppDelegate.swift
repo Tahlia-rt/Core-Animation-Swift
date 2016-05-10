@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         
-        let vc = TransformViewController()
+        let vc = CubeViewController()
         window?.rootViewController = vc
         
         window?.makeKeyAndVisible()
