@@ -86,6 +86,17 @@ class MatchManViewController: UIViewController {
         //scale
         textLayer.contentsScale = UIScreen.mainScreen().scale
         
-        textLayer.string = text
+        let attributeString = NSMutableAttributedString(string: text)
+        //set normal attribute
+        var attributes = [NSForegroundColorAttributeName: UIColor.redColor(),
+                          NSFontAttributeName:UIFont.systemFontOfSize(13.0)]
+        attributeString.setAttributes(attributes, range: NSMakeRange(0, text.characters.count))
+        
+        //special attribute
+        attributes = [NSForegroundColorAttributeName: UIColor.blueColor(),
+                      NSFontAttributeName:UIFont.systemFontOfSize(13.0)]
+        attributeString.setAttributes(attributes, range: NSMakeRange(6, 5))
+        
+        textLayer.string = attributeString
     }
 }
