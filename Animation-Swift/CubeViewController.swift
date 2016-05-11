@@ -126,7 +126,6 @@ class CubeViewController: UIViewController {
         //get dot product with light direction
         let light = GLKVector3Normalize(GLKVector3Make(LIGHT_DIRECTION.0, LIGHT_DIRECTION.1, LIGHT_DIRECTION.2))
         let dotProduct = GLKVector3DotProduct(light, normal)
-        print(dotProduct)
         //set lighting layer opacity
         
         let shadow = 1 + dotProduct - AMBIENT_LIGHT

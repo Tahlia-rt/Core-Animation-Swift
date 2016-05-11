@@ -10,6 +10,7 @@
 		1407164A1CE02A20006179B7 /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140716481CE02A20006179B7 /* TransformViewController.swift */; };
 		1407164B1CE02A20006179B7 /* TransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140716491CE02A20006179B7 /* TransformViewController.xib */; };
 		1407164D1CE05C16006179B7 /* CubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1407164C1CE05C16006179B7 /* CubeViewController.swift */; };
+		140BFA411CE33003001D0360 /* MatchManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140BFA401CE33003001D0360 /* MatchManViewController.swift */; };
 		140C252B1CDCE0F3008047E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C252A1CDCE0F3008047E9 /* AppDelegate.swift */; };
 		140C252D1CDCE0F3008047E9 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C252C1CDCE0F3008047E9 /* Base.swift */; };
 		140C25321CDCE0F4008047E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140C25311CDCE0F4008047E9 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		140716481CE02A20006179B7 /* TransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
 		140716491CE02A20006179B7 /* TransformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransformViewController.xib; sourceTree = "<group>"; };
 		1407164C1CE05C16006179B7 /* CubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeViewController.swift; sourceTree = "<group>"; };
+		140BFA401CE33003001D0360 /* MatchManViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchManViewController.swift; sourceTree = "<group>"; };
 		140C25271CDCE0F3008047E9 /* Animation-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animation-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		140C252A1CDCE0F3008047E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		140C252C1CDCE0F3008047E9 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				140716481CE02A20006179B7 /* TransformViewController.swift */,
 				140716491CE02A20006179B7 /* TransformViewController.xib */,
 				1407164C1CE05C16006179B7 /* CubeViewController.swift */,
+				140BFA401CE33003001D0360 /* MatchManViewController.swift */,
 			);
 			path = "Animation-Swift";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				140C253D1CDCE41A008047E9 /* UIView+Frame.swift in Sources */,
 				148B9D221CDF24DD006D3DDF /* UIImage+GIF.m in Sources */,
 				148B9D261CDF24DD006D3DDF /* UIView+WebCacheOperation.m in Sources */,
+				140BFA411CE33003001D0360 /* MatchManViewController.swift in Sources */,
 				148B9D1B1CDF24DD006D3DDF /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
