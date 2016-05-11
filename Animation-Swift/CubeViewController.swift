@@ -40,6 +40,7 @@ class CubeViewController: UIViewController {
             face.backgroundColor = UIColor.whiteColor()
             
             let button = UIButton()
+            button.backgroundColor = UIColor.clearColor()
             button.setTitle(String(index), forState: .Normal)
             button.setTitleColor(UIColor.randomColor(), forState: .Normal)
             button.size = CGSize(width: 100.0, height: 100.0)
@@ -55,9 +56,9 @@ class CubeViewController: UIViewController {
         //container的透视效果
         var perspective = CATransform3DIdentity
         //增加透视属性
-        perspective.m34 = -1 / 200.0
-        perspective = CATransform3DRotate(perspective, CGFloat(M_PI_4 * 0.9), 1, 0, 0);
-        perspective = CATransform3DRotate(perspective, CGFloat(M_PI_4), 0, 1, 0);
+        perspective.m34 = -1 / 500.0
+        perspective = CATransform3DRotate(perspective, -CGFloat(M_PI_4), 1, 0, 0);
+        perspective = CATransform3DRotate(perspective, -CGFloat(M_PI_4), 0, 1, 0);
         container.layer.sublayerTransform = perspective
         
         //face 1
@@ -91,8 +92,6 @@ class CubeViewController: UIViewController {
         transform = CATransform3DMakeTranslation(0, 0, -offset)
         transform = CATransform3DRotate(transform, CGFloat(M_PI), 0, 1, 0)
         addFace(5, transform: transform)
-        
-        applyLightingToFace(faces.first!.layer)
     }
     
     private func addFace(index: Int, transform: CATransform3D) {
@@ -101,11 +100,14 @@ class CubeViewController: UIViewController {
         let containerSize = self.container.size
         face.center = CGPointMake(containerSize.width / 2.0, containerSize.height / 2.0)
         face.layer.transform = transform
+        
+        //apply lighting
+        applyLightingToFace(face.layer)
     }
     
     private func applyLightingToFace(face: CALayer) {
         let layer = CALayer()
-        layer.frame = face.frame
+        layer.frame = face.bounds
         face.addSublayer(layer)
         
         //start transform
@@ -122,13 +124,13 @@ class CubeViewController: UIViewController {
         normal = GLKVector3Normalize(normal)
         
         //get dot product with light direction
-        let light = GLKVector3Make(LIGHT_DIRECTION.0, LIGHT_DIRECTION.1, LIGHT_DIRECTION.2)
+        let light = GLKVector3Normalize(GLKVector3Make(LIGHT_DIRECTION.0, LIGHT_DIRECTION.1, LIGHT_DIRECTION.2))
         let dotProduct = GLKVector3DotProduct(light, normal)
-        
+        print(dotProduct)
         //set lighting layer opacity
         
         let shadow = 1 + dotProduct - AMBIENT_LIGHT
-        let color = UIColor(white: 0, alpha: CGFloat(shadow))
+        let color = UIColor(white: 0, alpha: min(CGFloat(shadow), 0.5))
         layer.backgroundColor = color.CGColor
     }
 }
