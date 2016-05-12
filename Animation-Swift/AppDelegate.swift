@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         
-        let vc = MatchManViewController()
+        let vc = TransformLayerViewController()
         window?.rootViewController = vc
         
         window?.makeKeyAndVisible()
