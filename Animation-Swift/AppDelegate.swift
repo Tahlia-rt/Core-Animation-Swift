@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         
-        let vc = EmitterLayerViewController()
+        let vc = GAEAGLLayerViewController()
         window?.rootViewController = vc
         
         window?.makeKeyAndVisible()
