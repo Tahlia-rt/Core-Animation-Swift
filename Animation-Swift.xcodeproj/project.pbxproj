@@ -101,6 +101,8 @@
 		148B9D271CDF24DD006D3DDF /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D131CDF24DD006D3DDF /* SDWebImageCompat.m */; };
 		148B9D281CDF24DD006D3DDF /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B9D141CDF24DD006D3DDF /* NSData+ImageContentType.m */; };
 		149AB52E1CECAC57009F6C7C /* GAEAGLLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB52D1CECAC57009F6C7C /* GAEAGLLayerViewController.swift */; };
+		149AB57C1CED90D8009F6C7C /* colorfulStreak.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 149AB57B1CED90D8009F6C7C /* colorfulStreak.m4v */; };
+		149AB57E1CED90F8009F6C7C /* PlayerLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB57D1CED90F8009F6C7C /* PlayerLayerViewController.swift */; };
 		14B45BE91CE1F9ED00A28189 /* UIColor+Expanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B45BE81CE1F9ED00A28189 /* UIColor+Expanded.swift */; };
 		14E9F3BE1CDF3A0C002A278E /* LED-ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */; };
 		14FF69681CDE1547006890EC /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF69671CDE1547006890EC /* Shadow.swift */; };
@@ -219,6 +221,8 @@
 		148B9D1A1CDF24DD006D3DDF /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		148B9D2A1CDF2511006D3DDF /* ImageLoaderIndicator-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageLoaderIndicator-Bridging-Header.h"; path = "Animation-Swift/ImageLoaderIndicator-Bridging-Header.h"; sourceTree = "<group>"; };
 		149AB52D1CECAC57009F6C7C /* GAEAGLLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAEAGLLayerViewController.swift; sourceTree = "<group>"; };
+		149AB57B1CED90D8009F6C7C /* colorfulStreak.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorfulStreak.m4v; sourceTree = "<group>"; };
+		149AB57D1CED90F8009F6C7C /* PlayerLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLayerViewController.swift; sourceTree = "<group>"; };
 		14B45BE81CE1F9ED00A28189 /* UIColor+Expanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Expanded.swift"; path = "CircularLoaderView/UIColor+Expanded.swift"; sourceTree = "<group>"; };
 		14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LED-ClockViewController.swift"; sourceTree = "<group>"; };
 		14FF69671CDE1547006890EC /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
@@ -327,6 +331,7 @@
 		140C25291CDCE0F3008047E9 /* Animation-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				149AB57B1CED90D8009F6C7C /* colorfulStreak.m4v */,
 				140B94371CEB8BCF00D5AFB8 /* Images */,
 				148B9CFC1CDF24C2006D3DDF /* SDWebImage */,
 				148B9CF61CDF0C8B006D3DDF /* CircularLoaderView */,
@@ -347,6 +352,7 @@
 				1446E95A1CE4AFD300D5ADDA /* ImageLayerViewController.swift */,
 				142E909A1CEC2B15006364E2 /* EmitterLayerViewController.swift */,
 				149AB52D1CECAC57009F6C7C /* GAEAGLLayerViewController.swift */,
+				149AB57D1CED90F8009F6C7C /* PlayerLayerViewController.swift */,
 			);
 			path = "Animation-Swift";
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				140B949A1CEB8BCF00D5AFB8 /* homepage_04_00.jpg in Resources */,
 				140B94B31CEB8BCF00D5AFB8 /* homepage_07_01.jpg in Resources */,
 				140B94971CEB8BCF00D5AFB8 /* homepage_03_05.jpg in Resources */,
+				149AB57C1CED90D8009F6C7C /* colorfulStreak.m4v in Resources */,
 				140B94B81CEB8BCF00D5AFB8 /* homepage_07_06.jpg in Resources */,
 				140B94B11CEB8BCF00D5AFB8 /* homepage_06_07.jpg in Resources */,
 				140B94A61CEB8BCF00D5AFB8 /* homepage_05_04.jpg in Resources */,
@@ -569,6 +576,7 @@
 				148B9D261CDF24DD006D3DDF /* UIView+WebCacheOperation.m in Sources */,
 				140BFA411CE33003001D0360 /* MatchManViewController.swift in Sources */,
 				148B9D1B1CDF24DD006D3DDF /* SDImageCache.m in Sources */,
+				149AB57E1CED90F8009F6C7C /* PlayerLayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
