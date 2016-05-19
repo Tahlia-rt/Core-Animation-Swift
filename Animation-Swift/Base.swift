@@ -30,14 +30,26 @@ class Chapter1: UIViewController {
         return bottomView
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    lazy var blueLayer: CALayer = {
         let bluelayer = CALayer()
         bluelayer.frame = CGRectMake(0, 0, 100.0, 100.0)
         bluelayer.backgroundColor = UIColor.blueColor().CGColor
-        bluelayer.position = CGPointMake(self.view!.centerX, 50.0)
-        view.layer.addSublayer(bluelayer)
+        bluelayer.position = CGPointMake(self.view!.centerX, 75.0)
+        bluelayer.delegate = self
+        return bluelayer
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //transitoin
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        transition.subtype = kCATransitionFromLeft
+        transition.duration = 0.5
+        blueLayer.actions = ["position": transition]
+        view.layer.addSublayer(blueLayer)
         
         view.addSubview(bottomView)
         
@@ -63,38 +75,16 @@ class Chapter1: UIViewController {
         centerView.layer.contentsScale = snowImage!.scale
         view.addSubview(centerView)
         
-        let topButton = UIButton()
-        topButton.setTitle("上", forState: .Normal)
-        topButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        topButton.sizeToFit()
-        topButton.addTarget(self, action: #selector(handleTop(_:)), forControlEvents: .TouchUpInside)
-        topButton.centerX = view.width / 2.0
-        view.addSubview(topButton)
         
+        //button
         let bottomButton = UIButton()
         bottomButton.setTitle("下", forState: .Normal)
         bottomButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         bottomButton.sizeToFit()
         bottomButton.centerX = view.width / 2.0
-        bottomButton.y = 100.0
-        bottomButton.addTarget(self, action: #selector(handleBottom(_:)), forControlEvents: .TouchUpInside)
+        bottomButton.y = 125.0
+        bottomButton.addTarget(self, action: #selector(handleTop(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(bottomButton)
-        
-        let leftButon = UIButton()
-        leftButon.setTitle("左", forState: .Normal)
-        leftButon.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        leftButon.sizeToFit()
-        leftButon.x = view.centerX - 40
-        leftButon.y = 50
-        view.addSubview(leftButon)
-        
-        let rightButton = UIButton()
-        rightButton.setTitle("右", forState: .Normal)
-        rightButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        rightButton.sizeToFit()
-        rightButton.x = view.centerX + 20
-        rightButton.y = 50
-        view.addSubview(rightButton)
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,15 +93,21 @@ class Chapter1: UIViewController {
     }
     
     func handleTop(sender: UIButton) {
-        top = top + 0.025
-        bottomView.layer.contentsCenter = CGRectMake(top, 0, 1 - top - 0.05, 1)
-        print(bottomView.layer.contentsCenter)
+        self.blueLayer.backgroundColor = UIColor.randomColor().CGColor
     }
-    
-    func handleBottom(sender: UIButton) {
-        top = top - 0.025
-        bottomView.layer.contentsCenter = CGRectMake(top, 0, 1 - top - 0.05, 1)
-        print(bottomView.layer.contentsCenter)
+}
+
+extension Chapter1 {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        //get the touch point
+        let point = touches.first!.locationInView(self.view)
+        print(point)
+        //check if we've tapped the moving layer
+        if let _ = blueLayer.presentationLayer()?.hitTest(point) {
+            blueLayer.backgroundColor = UIColor.randomColor().CGColor
+        } else {
+            blueLayer.position = point
+        }
     }
 }
 
