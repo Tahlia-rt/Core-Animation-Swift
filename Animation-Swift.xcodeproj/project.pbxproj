@@ -103,6 +103,7 @@
 		149AB52E1CECAC57009F6C7C /* GAEAGLLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB52D1CECAC57009F6C7C /* GAEAGLLayerViewController.swift */; };
 		149AB57C1CED90D8009F6C7C /* colorfulStreak.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 149AB57B1CED90D8009F6C7C /* colorfulStreak.m4v */; };
 		149AB57E1CED90F8009F6C7C /* PlayerLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB57D1CED90F8009F6C7C /* PlayerLayerViewController.swift */; };
+		149AB5801CEDE966009F6C7C /* ObviousAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB57F1CEDE966009F6C7C /* ObviousAnimationViewController.swift */; };
 		14B45BE91CE1F9ED00A28189 /* UIColor+Expanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B45BE81CE1F9ED00A28189 /* UIColor+Expanded.swift */; };
 		14E9F3BE1CDF3A0C002A278E /* LED-ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */; };
 		14FF69681CDE1547006890EC /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF69671CDE1547006890EC /* Shadow.swift */; };
@@ -223,6 +224,7 @@
 		149AB52D1CECAC57009F6C7C /* GAEAGLLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAEAGLLayerViewController.swift; sourceTree = "<group>"; };
 		149AB57B1CED90D8009F6C7C /* colorfulStreak.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorfulStreak.m4v; sourceTree = "<group>"; };
 		149AB57D1CED90F8009F6C7C /* PlayerLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLayerViewController.swift; sourceTree = "<group>"; };
+		149AB57F1CEDE966009F6C7C /* ObviousAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObviousAnimationViewController.swift; sourceTree = "<group>"; };
 		14B45BE81CE1F9ED00A28189 /* UIColor+Expanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Expanded.swift"; path = "CircularLoaderView/UIColor+Expanded.swift"; sourceTree = "<group>"; };
 		14E9F3BD1CDF3A0C002A278E /* LED-ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LED-ClockViewController.swift"; sourceTree = "<group>"; };
 		14FF69671CDE1547006890EC /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				142E909A1CEC2B15006364E2 /* EmitterLayerViewController.swift */,
 				149AB52D1CECAC57009F6C7C /* GAEAGLLayerViewController.swift */,
 				149AB57D1CED90F8009F6C7C /* PlayerLayerViewController.swift */,
+				149AB57F1CEDE966009F6C7C /* ObviousAnimationViewController.swift */,
 			);
 			path = "Animation-Swift";
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				149AB52E1CECAC57009F6C7C /* GAEAGLLayerViewController.swift in Sources */,
 				142E909B1CEC2B15006364E2 /* EmitterLayerViewController.swift in Sources */,
 				140C253D1CDCE41A008047E9 /* UIView+Frame.swift in Sources */,
+				149AB5801CEDE966009F6C7C /* ObviousAnimationViewController.swift in Sources */,
 				148B9D221CDF24DD006D3DDF /* UIImage+GIF.m in Sources */,
 				148B9D261CDF24DD006D3DDF /* UIView+WebCacheOperation.m in Sources */,
 				140BFA411CE33003001D0360 /* MatchManViewController.swift in Sources */,
