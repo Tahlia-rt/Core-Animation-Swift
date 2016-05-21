@@ -8,7 +8,14 @@
 
 import UIKit
 
+
 class TimingViewController: UIViewController {
+    
+    var duration: CGFloat = 1.0
+    var timeOff:  CGFloat = 0.0
+    var lastStep: NSTimeInterval = 0.0
+    var fromValue: NSValue?
+    var toValue:   NSValue?
     
     lazy var ballLayer: CALayer = {
         let ballLayer = CALayer()
@@ -18,6 +25,8 @@ class TimingViewController: UIViewController {
         ballLayer.contentsGravity = kCAGravityResizeAspect
         return ballLayer
     }()
+    
+    var timer: CADisplayLink?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,28 +66,76 @@ class TimingViewController: UIViewController {
     }
     
     func animate() {
-        let animation = CAKeyframeAnimation()
-        animation.keyPath = "position"
-        animation.duration = 1.0
-        animation.values = [NSValue(CGPoint: CGPoint(x: 150.0, y: 112.5)),
-                            NSValue(CGPoint: CGPoint(x: 150.0, y: 211.0)),
-                            NSValue(CGPoint: CGPoint(x: 150.0, y: 140.0)),
-                            NSValue(CGPoint: CGPoint(x: 150.0, y: 211.0)),
-                            NSValue(CGPoint: CGPoint(x: 150.0, y: 165.0)),
-                            NSValue(CGPoint: CGPoint(x: 150.0, y: 211.0)),
-                            NSValue(CGPoint: CGPoint(x: 150.0, y: 175.0)),
-                            NSValue(CGPoint: CGPoint(x: 150.0, y: 211.0))]
+        ballLayer.position = CGPoint(x: 150.0, y: 112.5)
+        //animation
+        duration = 1.0
+        timeOff = 0.0
+        fromValue = NSValue(CGPoint: CGPoint(x: 150.0, y: 112.5))
+        toValue   = NSValue(CGPoint: CGPoint(x: 150.0, y: 211.0))
+        //stop the timer if it's already running
+        if let timer = timer {
+            timer.invalidate()
+        }
+//        timer = NSTimer.scheduledTimerWithTimeInterval(1/60.0, target: self, selector: #selector(step(_:)), userInfo: nil, repeats: true)
+        lastStep = CACurrentMediaTime()
+        timer = CADisplayLink(target: self, selector: #selector(step(_:)))
+        timer?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+    }
+    
+    // MARK: - Action
+    func step(timer: CADisplayLink) {
+        let thisStep = CACurrentMediaTime()
+        let stepDuration = thisStep - lastStep
+        lastStep = thisStep
+        timeOff = min(timeOff + CGFloat(stepDuration), self.duration)
+        //get normalized time offset
+       var time = timeOff / duration
+        //apply easing
+        time = bounceEaseOut(time)
+        //interpolate position
+        let position = interpolateFromValue(fromValue!, toValue: toValue!, time: time)
+        ballLayer.position = position.CGPointValue()
+        //stop the timer if we've reached the end of the animation
+        if timeOff >= duration {
+            self.timer!.invalidate()
+            self.timer = nil
+        }
+    }
+    
+    // MARK: - Private
+    func interpolate(from: CGFloat, to: CGFloat, time: CGFloat) -> CGFloat {
+        return (to - from) * time + from
+    }
+    
+    func interpolateFromValue(fromValue: AnyObject, toValue: AnyObject, time: CGFloat) -> AnyObject {
+        if fromValue is NSValue {
+            let type = fromValue.objCType
+            if String.fromCString(type) == "{CGPoint=dd}" {
+                let from = fromValue.CGPointValue()
+                let  to  = toValue.CGPointValue()
+                let result = CGPoint(x: interpolate(from.x, to: to.x, time: time),
+                                     y: interpolate(from.y, to: to.y, time: time))
+                return NSValue(CGPoint: result)
+            }
+        }
         
-        animation.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn),
-                                     CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),
-                                     CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn),
-                                     CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),
-                                     CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn),
-                                     CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),
-                                     CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)]
-        animation.keyTimes = [0.0, 0.3, 0.5, 0.7, 0.8, 0.9, 0.95, 1]
-        ballLayer.addAnimation(animation, forKey: nil)
-        
-        ballLayer.position = CGPoint(x: 150.0, y: 211.0)
+        return time < 0.5 ? fromValue : toValue
+    }
+    
+    func bounceEaseOut(t : CGFloat) -> CGFloat {
+        if t < (4.0/11.0) {
+            return (121 * t * t) / 16.0
+        } else if t < (8.0/11.0) {
+            return (363/40.0 * t * t) - (99/10.0 * t) + 17/5.0
+        }  else if t < (9.0/10.0) {
+            return (4356/361.0 * t * t) - (35442/1805.0 * t) + 16061/1805.0
+        }
+        return (54/5.0 * t * t) - (513/25.0 * t) + 268/25.0
+    }
+}
+
+extension TimingViewController {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        animate()
     }
 }
