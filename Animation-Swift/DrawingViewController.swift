@@ -19,8 +19,6 @@ class DrawingViewController: UIViewController {
         let drawingView = DrawingView()
         drawingView.frame = view.bounds
         view.addSubview(drawingView)
-        
-        print(drawingView.layer.classForCoder)
     }
     
 }
